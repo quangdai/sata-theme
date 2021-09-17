@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "settings": {
+      }
+    },
+    "featured": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "featured"
+  ]
+}

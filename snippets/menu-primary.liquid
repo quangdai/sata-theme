@@ -1,0 +1,42 @@
+<ul class="menu-primary">
+    {%- for link in section.settings.menu.links -%}
+        {%- if link.links != blank -%}
+            <li class="menu-item mega-menu mega-img {% if link.current %}active{% endif %} {%- if link.child_active -%} has-child{%- endif -%}">
+                <a href="{{ link.url }}" class="menu-link">
+                    <span class="menu-name">
+                        {{ link.title | escape }}
+                    </span>
+                    {%- if link.child_active -%}
+                    <i class="pe-7s-angle-down"></i>
+                    {% endif %}
+                </a>
+                <div class="menu-child">
+                    <div class="mega-menu">
+                        <ul class="wrap-menu-child row-cols-5">
+                            {%- for childlink in link.links -%}
+                                <li class="menu-child-item">
+                                    <a href="{{ childlink.url }}" class="menu-child-link child-img">
+                                        <div class="img">
+                                            <img src="https://via.placeholder.com/300" alt="{{ childlink.title }}" loading="lazy">
+                                        </div>
+                                        <span class="menu-child-lable">
+                                            {{ childlink.title }}
+                                        </span>
+                                    </a>
+                                </li>
+                            {%- endfor -%}
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        {%- else -%}
+            <li class="menu-item {% if link.current %} active {% endif %}">
+                <a href="{{ link.url }}" class="menu-link">
+                    <span class="menu-name">
+                        {{ link.title | escape }}
+                    </span>
+                </a>
+            </li>
+        {%- endif -%}
+    {%- endfor -%}
+</ul>
