@@ -99,6 +99,7 @@
         }
     },
     "order": [
+        "banner_home",
         "image_banner",
         "rich_text",
         "featured_products",
