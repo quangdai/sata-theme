@@ -1,23 +1,33 @@
+<link rel="stylesheet" href="{{ 'owl.carousel.min.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'owl.theme.default.min.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<script src="{{ 'owl.carousel.min.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'main.js' | asset_url }}" defer="defer"></script>
+
 <section class="banner-slider-home">
     <div class="slider-home owl-carousel js-carousel" data-loop="true" data-arrows="false" data-items="1" data-margin="60">
-        <div class="slider-item" style="background-image: url('images/home/home1-slider1.jpeg');">
-            <div data-animation="fadeInLeft" class="banner-inner">
-                <h6>
-                    TOP
-                </h6>
-                <h6 class="mb-md-50">
-                    TRENDY
-                </h6>
-                <h1 class="mb-md-50">
-                    Fall Winter<br>Basic Collection
-                </h1>
-                <p class="mb-md-80">
-                    There are many variations of passages<br>
-                    of Lorem Ipsum available, but the majority have suffered.
-                </p>
-                <h6 style="font-weight: 800;"><a href="/shop">BUY NOW</a></h6>
+
+        {%- for block in section.blocks -%}
+            <div class="slider-item owl-lazy" data-src="{{block.settings.image | image_url}}">
+                <div data-animation="fadeInLeft" class="banner-inner">
+                    <h6>
+                        TOP
+                    </h6>
+                    <h6 class="mb-md-50">
+                        TRENDY
+                    </h6>
+                    <h1 class="mb-md-50">
+                        Fall Winter<br>Basic Collection
+                    </h1>
+                    <p class="mb-md-80">
+                        There are many variations of passages<br>
+                        of Lorem Ipsum available, but the majority have suffered.
+                    </p>
+                    <h6 style="font-weight: 800;"><a href="/shop">BUY NOW</a></h6>
+                </div>
             </div>
-        </div>
+        {%- endfor -%}
+        
     </div>
 </section>
 
@@ -34,6 +44,16 @@
                     "type": "image_picker",
                     "id": "image",
                     "label": "Chose image"
+                },
+                {
+                    "type": "text",
+                    "id": "banner_title",
+                    "label": "Banner title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "banner_desc",
+                    "label": "Banner Description"
                 }
             ]
         }
