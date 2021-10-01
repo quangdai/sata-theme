@@ -17,11 +17,10 @@
                         TRENDY
                     </h6>
                     <h1 class="mb-md-50">
-                        Fall Winter<br>Basic Collection
+                        {{block.settings.banner_title | escape}}
                     </h1>
                     <p class="mb-md-80">
-                        There are many variations of passages<br>
-                        of Lorem Ipsum available, but the majority have suffered.
+                        {{block.settings.banner_desc | escape}}
                     </p>
                     <h6 style="font-weight: 800;"><a href="/shop">BUY NOW</a></h6>
                 </div>
@@ -42,12 +41,12 @@
             "settings": [
                 {
                     "type": "text",
-                    "id": "banner_title",
+                    "id": "title",
                     "label": "Banner title"
                 },
                 {
                     "type": "textarea",
-                    "id": "banner_desc",
+                    "id": "desc",
                     "label": "Banner Description"
                 },
                 {
