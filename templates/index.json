@@ -6,13 +6,21 @@
         "ead3813c-140d-44d0-9d40-cf5460f7a812": {
           "type": "heading",
           "settings": {
-            "image": "shopify:\/\/shop_images\/banner-slider-home.jpg"
+            "title": "Paint Splatter<br> Effect Dress",
+            "desc": "There are many variations of passages<br>\nof Lorem Ipsum available, but the majority have suffered.",
+            "image": "shopify:\/\/shop_images\/banner-slider-home.jpg",
+            "button": "BUY NOW",
+            "link": "shopify:\/\/collections\/all"
           }
         },
         "0d07ebf7-336f-4f1b-b1b2-c2c5c2113e69": {
           "type": "heading",
           "settings": {
-            "image": "shopify:\/\/shop_images\/banner-slider-home.jpg"
+            "title": "Paint Splatter<br> Effect Dress",
+            "desc": "There are many variations of passages<br>\nof Lorem Ipsum available, but the majority have suffered.",
+            "image": "shopify:\/\/shop_images\/banner-slider-home.jpg",
+            "button": "BUY NOW",
+            "link": "shopify:\/\/collections\/frontpage"
           }
         }
       },

@@ -17,12 +17,12 @@
                         TRENDY
                     </h6>
                     <h1 class="mb-md-50">
-                        {{block.settings.title | escape}}
+                        {{ block.settings.title | HTML }}
                     </h1>
                     <p class="mb-md-80">
-                        {{block.settings.desc | escape}}
+                        {{ block.settings.desc | HTML }}
                     </p>
-                    <h6 style="font-weight: 800;"><a href="/shop">BUY NOW</a></h6>
+                    <h6 style="font-weight: 800;"><a href="{{ block.settings.link }}">{{ block.settings.button | HTML }}</a></h6>
                 </div>
             </div>
         {%- endfor -%}
